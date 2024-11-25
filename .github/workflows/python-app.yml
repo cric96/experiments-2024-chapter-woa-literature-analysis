@@ -26,7 +26,7 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Convert to python
-      run: jupyter nbconvert --to python notebook.ipynb
+      run: python -m jupyter nbconvert --to python notebook.ipynb
     - name: Execute the code
       run: python notebook.py
 
